@@ -1,0 +1,122 @@
+.navbar__container {
+  background: var(--color-bg);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* border: 1px solid red; */
+}
+
+.floating {
+  transition: var(--transition);
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px rgb(35, 35, 35);
+}
+
+.navbar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.navbar__logo-link {
+  color: var(--color-white);
+  justify-self: start;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  list-style: none;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav__item {
+  height: 45px;
+}
+
+.nav__link {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav__link:hover {
+  background: var(--color-bg-variant);
+  transition: var(--transition);
+}
+
+.navbar__menu-icon {
+  display: none;
+}
+
+/* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
+@media screen and (max-width: 1024px) {
+}
+
+/* ======= MEDIA QUERIES - SMALL DEVICES ======= */
+@media screen and (max-width: 600px) {
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: -100%;
+    opacity: 1;
+    transition: var(--transition);
+  }
+
+  .nav__menu.active {
+    background: var(--color-bg);
+    left: 0;
+    opacity: 1;
+    transition: var(--transition);
+    z-index: 1;
+  }
+
+  .nav__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav__link:hover {
+    background: var(--color-bg-variant);
+    border-radius: 0;
+  }
+
+  .navbar__logo-link {
+    display: block;
+    margin-left: 1rem;
+    /* border: 1px solid red; */
+  }
+
+  .navbar__menu-icon {
+    display: block;
+    text-align: center;
+    width: 30px;
+    margin: 0 1rem 0 auto;
+    cursor: pointer;
+    /* border: 1px solid red; */
+  }
+}
