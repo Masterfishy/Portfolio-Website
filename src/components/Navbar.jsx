@@ -5,19 +5,19 @@ import "./Navbar.css";
 const navigationOptions = [
   {
     name: "About",
-    link: "/",
+    link: "#about",
   },
   {
     name: "Skills",
-    link: "/",
+    link: "#skills",
   },
   {
     name: "Experiences",
-    link: "/",
+    link: "#experiences",
   },
   {
     name: "Contact",
-    link: "/",
+    link: "#contact",
   },
 ];
 
