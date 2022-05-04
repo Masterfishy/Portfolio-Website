@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const STYLES = ["btn-primary", "btn-outline"];
 
@@ -10,7 +10,7 @@ export const Button = ({ children, to, type, onClick, buttonStyle }) => {
     : STYLES[0];
 
   return (
-    <Link to={to} className="btn__link">
+    <a href={to} className="btn__link">
       <button
         className={`btn ${checkButtonStyle}`}
         onClick={onClick}
@@ -18,6 +18,6 @@ export const Button = ({ children, to, type, onClick, buttonStyle }) => {
       >
         {children}
       </button>
-    </Link>
+    </a>
   );
 };

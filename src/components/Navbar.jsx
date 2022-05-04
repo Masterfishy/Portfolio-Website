@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const navigationOptions = [
@@ -41,13 +41,16 @@ function Navbar() {
     <>
       <nav className={`navbar__container ${atTop ? "" : "floating"}`}>
         <div className="navbar__logo">
-          <Link
+          {/* <Link
             to="#home"
             className="navbar__logo-link"
             onClick={closeMobileMenu}
           >
             ZACH LONG
-          </Link>
+          </Link> */}
+          <a href="#home" className="navbar__logo-link">
+            ZACH LONG
+          </a>
         </div>
         <div className="navbar__menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-xmark" : "fas fa-bars"} />
@@ -56,9 +59,18 @@ function Navbar() {
           {navigationOptions.map(({ name, link }, id) => {
             return (
               <li className="nav__item" key={id}>
-                <Link to={link} className="nav__link" onClick={closeMobileMenu}>
+                {/* <Link to={link} className="nav__link" onClick={closeMobileMenu}>
                   {name}
-                </Link>
+                </Link> */}
+                {
+                  <a
+                    href={link}
+                    className="nav__link"
+                    onClick={closeMobileMenu}
+                  >
+                    {name}
+                  </a>
+                }
               </li>
             );
           })}

@@ -1,0 +1,14 @@
+.card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
