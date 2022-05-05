@@ -28,8 +28,8 @@
 
 /* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
 @media screen and (max-width: 1024px) {
-  .hero__container {
-    height: calc(68vh - var(--navbar-width));
+  .container.hero__container {
+    height: auto;
   }
 }
 

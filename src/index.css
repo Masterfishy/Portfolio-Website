@@ -100,7 +100,16 @@ img {
     width: var(--container-width-sm);
   }
 
-  .section > h2 {
+  .section__header {
+    text-align: center;
+  }
+
+  .section__header > h5 {
+    text-align: center;
+  }
+
+  .section__header > h2 {
     margin-bottom: 2rem;
+    text-align: center;
   }
 }
