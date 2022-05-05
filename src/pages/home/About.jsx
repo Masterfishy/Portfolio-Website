@@ -7,7 +7,7 @@ function About() {
   const [button, setButton] = useState(false);
 
   const showButton = () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 1024) {
       setButton(true);
     } else {
       setButton(false);

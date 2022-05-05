@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "../../components/Card";
+import { Stars } from "../../components/Stars";
 import "./Skills.css";
 
 const languages = [
@@ -18,6 +19,10 @@ const languages = [
   {
     name: "R",
     rating: 5,
+  },
+  {
+    name: "C++",
+    rating: 3,
   },
   {
     name: "C#",
@@ -45,11 +50,11 @@ const languages = [
   },
   {
     name: "SQLite",
-    rating: 3,
+    rating: 2,
   },
   {
     name: "Postgres",
-    rating: 3,
+    rating: 2,
   },
 ];
 
@@ -126,7 +131,7 @@ const soft = [
 function Skills() {
   return (
     <>
-      <div className="container skills__container">
+      <div id="skills" className="container skills__container">
         <div className="section__header">
           <h5>Take a Look at</h5>
           <h2>My Skills</h2>
@@ -136,76 +141,70 @@ function Skills() {
             <Card className="skills__card">
               <h3>Languages</h3>
               <div className="skills__details">
-                {languages.map(({ name, rating }, id) => {
-                  return (
-                    <div className="skill" key={id}>
-                      <i className="fa-solid fa-badge-check skill-patch" />
-                      <h4>{name}</h4>
-                      {[...Array(rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-solid fa-star skill-star-fill"
+                {languages
+                  .sort((a, b) => {
+                    return a.rating - b.rating;
+                  })
+                  .reverse()
+                  .map(({ name, rating }, id) => {
+                    return (
+                      <div className="skill" key={`lang${id}`}>
+                        <h4>{name}</h4>
+                        <Stars
+                          name="lang"
+                          startStyle="skills__star"
+                          fillStyle="skills__star-fill"
+                          rating={rating}
                         />
-                      ))}
-                      {[...Array(5 - rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-regular fa-star skill-star-outline"
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
+                      </div>
+                    );
+                  })}
               </div>
             </Card>
             <Card className="skills__card">
               <h3>Technologies</h3>
               <div className="skills__details">
-                {tech.map(({ name, rating }, id) => {
-                  return (
-                    <div className="skill" key={id}>
-                      <i className="fa-solid fa-badge-check skill-patch" />
-                      <h4>{name}</h4>
-                      {[...Array(rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-solid fa-star skill-star-fill"
+                {tech
+                  .sort((a, b) => {
+                    return a.rating - b.rating;
+                  })
+                  .reverse()
+                  .map(({ name, rating }, id) => {
+                    return (
+                      <div className="skill" key={`tech${id}`}>
+                        <h4>{name}</h4>
+                        <Stars
+                          name="tech"
+                          startStyle="skills__star"
+                          fillStyle="skills__star-fill"
+                          rating={rating}
                         />
-                      ))}
-                      {[...Array(5 - rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-regular fa-star skill-star-outline"
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
+                      </div>
+                    );
+                  })}
               </div>
             </Card>
             <Card className="skills__card">
-              <h3>Soft Skills</h3>
+              <h3>Industry Skills</h3>
               <div className="skills__details">
-                {soft.map(({ name, rating }, id) => {
-                  return (
-                    <div className="skill" key={id}>
-                      <i className="fa-solid fa-badge-check skill-patch" />
-                      <h4>{name}</h4>
-                      {[...Array(rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-solid fa-star skill-star-fill"
+                {soft
+                  .sort((a, b) => {
+                    return a.rating - b.rating;
+                  })
+                  .reverse()
+                  .map(({ name, rating }, id) => {
+                    return (
+                      <div className="skill" key={`soft${id}`}>
+                        <h4>{name}</h4>
+                        <Stars
+                          name="soft"
+                          startStyle="skills__star"
+                          fillStyle="skills__star-fill"
+                          rating={rating}
                         />
-                      ))}
-                      {[...Array(5 - rating)].map((index) => (
-                        <i
-                          key={index}
-                          className="fa-regular fa-star skill-star-outline"
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
+                      </div>
+                    );
+                  })}
               </div>
             </Card>
           </div>

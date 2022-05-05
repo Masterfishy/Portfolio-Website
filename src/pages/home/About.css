@@ -1,8 +1,9 @@
-.about__container {
+.container.about__container {
   padding-top: calc(var(--navbar-width) + 1rem);
 }
 
 .about__body {
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
 }

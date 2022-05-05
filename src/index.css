@@ -46,10 +46,8 @@ body {
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  gap: 15%;
-  grid-template-columns: 35% 50%;
+  display: grid;
+  grid-template-columns: 20% 80%;
   /* border: 1px solid red; */
 }
 
@@ -63,6 +61,10 @@ h5 {
 
 h1 {
   font-size: 2.5rem;
+}
+
+.section__header {
+  /* border: 1px solid red; */
 }
 
 .section__header > h2,
