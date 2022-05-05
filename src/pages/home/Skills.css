@@ -12,6 +12,10 @@
   gap: 1.2rem;
 }
 
+.skills__card {
+  padding: 2rem;
+}
+
 .skills__card > h3 {
   text-align: center;
   margin-bottom: 2rem;
@@ -21,7 +25,7 @@
 .skills__details {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 2rem;
+  row-gap: 1rem;
 }
 
 .skills__star {
@@ -31,4 +35,22 @@
 
 .skills__star-fill {
   color: var(--color-primary);
+}
+
+/* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
+@media screen and (max-width: 1024px) {
+  .container.skills__container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======= MEDIA QUERIES - SMALL DEVICES ======= */
+@media screen and (max-width: 600px) {
+  .skills__card {
+    padding: 1rem;
+  }
 }
