@@ -39,42 +39,44 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`navbar__container ${atTop ? "" : "floating"}`}>
-        <div className="navbar__logo">
-          {/* <Link
+      <nav className="navbar">
+        <div className={`navbar__container ${atTop ? "" : "floating"}`}>
+          <div className="navbar__logo">
+            {/* <Link
             to="#home"
             className="navbar__logo-link"
             onClick={closeMobileMenu}
           >
             ZACH LONG
           </Link> */}
-          <a href="#home" className="navbar__logo-link">
-            ZACH LONG
-          </a>
-        </div>
-        <div className="navbar__menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-xmark" : "fas fa-bars"} />
-        </div>
-        <ul className={click ? "nav__menu active" : "nav__menu"}>
-          {navigationOptions.map(({ name, link }, id) => {
-            return (
-              <li className="nav__item" key={id}>
-                {/* <Link to={link} className="nav__link" onClick={closeMobileMenu}>
+            <a href="#home" className="navbar__logo-link">
+              ZACH LONG
+            </a>
+          </div>
+          <div className="navbar__menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-xmark" : "fas fa-bars"} />
+          </div>
+          <ul className={click ? "nav__menu active" : "nav__menu"}>
+            {navigationOptions.map(({ name, link }, id) => {
+              return (
+                <li className="nav__item" key={id}>
+                  {/* <Link to={link} className="nav__link" onClick={closeMobileMenu}>
                   {name}
                 </Link> */}
-                {
-                  <a
-                    href={link}
-                    className="nav__link"
-                    onClick={closeMobileMenu}
-                  >
-                    {name}
-                  </a>
-                }
-              </li>
-            );
-          })}
-        </ul>
+                  {
+                    <a
+                      href={link}
+                      className="nav__link"
+                      onClick={closeMobileMenu}
+                    >
+                      {name}
+                    </a>
+                  }
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </nav>
     </>
   );

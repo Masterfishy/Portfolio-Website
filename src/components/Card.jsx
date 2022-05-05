@@ -1,10 +1,10 @@
 import React from "react";
 import "./Card.css";
 
-export const Card = ({ children }) => {
+export const Card = ({ className, children }) => {
   return (
     <>
-      <div className="card">{children}</div>
+      <div className={`card ${className}`}>{children}</div>
     </>
   );
 };

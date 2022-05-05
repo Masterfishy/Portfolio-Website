@@ -23,6 +23,8 @@
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
+
+  --navbar-width: 45px;
 }
 
 html {
@@ -48,6 +50,7 @@ body {
   flex-direction: row;
   gap: 15%;
   grid-template-columns: 35% 50%;
+  /* border: 1px solid red; */
 }
 
 h1,
@@ -87,9 +90,6 @@ img {
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
-  }
-
-  .section {
     margin-top: 6rem;
   }
 }

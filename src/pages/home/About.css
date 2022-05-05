@@ -1,4 +1,39 @@
+.about__container {
+  padding-top: calc(var(--navbar-width) + 1rem);
+}
+
 .about__body {
   display: flex;
   flex-direction: column;
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__card h5 {
+  font-size: 0.95rem;
+}
+
+.about__card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.about__blurb {
+  margin: 2rem 0 2.6rem;
+}
+
+.about__blurb p {
+  margin-bottom: 1rem;
+}
+
+/* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
+@media screen and (max-width: 1024px) {
+}
+
+/* ======= MEDIA QUERIES - SMALL DEVICES ======= */
+@media screen and (max-width: 600px) {
 }
