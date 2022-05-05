@@ -73,8 +73,8 @@ function About() {
             </p>
             <p>
               I am currently living in Hawaii taking some time to
-              <strong> develop personal projects</strong>, like this website
-              and,
+              <strong> develop personal projects</strong>, like this website,
+              and
               <strong> start a small company</strong>. I have also been enjoying
               reading a number of sci-fi books, surfing, hiking, gardening with
               my grandma, and working part-time at a wilderness therapy program
