@@ -3,6 +3,7 @@
   height: calc(100vh - var(--navbar-width));
   justify-content: center;
   align-items: center;
+  display: flex;
   gap: 1.2rem;
   position: relative;
   /* border: 1px solid red; */
@@ -13,7 +14,7 @@
 }
 
 .hero__cta {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   display: flex;
   gap: 1.2rem;
   justify-content: flex-start;

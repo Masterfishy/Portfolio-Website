@@ -1,0 +1,58 @@
+.container.experiences__container {
+  padding-top: calc(var(--navbar-width) + 1rem);
+}
+
+.experiences__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.experiences__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.experiences__card-header {
+  background: var(--color-primary);
+  padding: 1rem;
+}
+
+.experiences__card-header h3 {
+  color: var(--color-bg);
+}
+
+.experiences__card-header small {
+  color: var(--color-bg-variant);
+}
+
+.experiences__card-body {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  padding: 1rem;
+}
+
+.experiences__card-body:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.experiences__card-details {
+  color: var(--color-primary);
+  width: max-content;
+}
+
+.experiences__card-detail {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.experiences__card-detail i {
+  width: 2rem;
+  /* border: 1px solid red; */
+}

@@ -1,0 +1,44 @@
+{
+  "experiences": [
+    {
+      "order": 0,
+      "name": "King Abdullah University of Science and Technology",
+      "years": "May 2021 - August 2021",
+      "role": "Research Intern",
+      "loc": "Thuwal, Saudi Arabia",
+      "link": "https://www.kaust.edu.sa/en"
+    },
+    {
+      "order": 1,
+      "name": "Capital One",
+      "years": "May 2020 - August 2020",
+      "role": "Software Engineer Intern",
+      "loc": "Remote due to Covid-19",
+      "link": "https://www.capitalonecareers.com/internships"
+    },
+    {
+      "order": 2,
+      "name": "Peraton",
+      "years": "January 2020 - May 2020",
+      "role": "Software Engineer Co-Op",
+      "loc": "Blacksburg, VA",
+      "link": "https://www.peraton.com"
+    },
+    {
+      "order": 3,
+      "name": "Edward Via College of Osteopathic Medicine",
+      "years": "September 2018 - November 2019",
+      "role": "Software Developer",
+      "loc": "Blacksburg, VA",
+      "link": "https://www.vcom.edu"
+    },
+    {
+      "order": 4,
+      "name": "1901 Group",
+      "years": "June 2019 - August 2019",
+      "role": "Software Engineer Intern",
+      "loc": "Blacksburg, VA",
+      "link": "https://www.1901group.com"
+    }
+  ]
+}

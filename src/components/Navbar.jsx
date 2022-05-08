@@ -41,7 +41,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className={`navbar__container ${atTop ? "" : "floating"}`}>
-          <div className="navbar__logo">
+          <div className="navbar__logo" onClick={closeMobileMenu}>
             {/* <Link
             to="#home"
             className="navbar__logo-link"

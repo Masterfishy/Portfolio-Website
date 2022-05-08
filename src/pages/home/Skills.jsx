@@ -2,131 +2,9 @@ import React from "react";
 import { Card } from "../../components/Card";
 import { Stars } from "../../components/Stars";
 import "./Skills.css";
+import rawData from "../../data/skills.json";
 
-const languages = [
-  {
-    name: "Python",
-    rating: 5,
-  },
-  {
-    name: "Golang",
-    rating: 3,
-  },
-  {
-    name: "C",
-    rating: 4,
-  },
-  {
-    name: "R",
-    rating: 5,
-  },
-  {
-    name: "C++",
-    rating: 3,
-  },
-  {
-    name: "C#",
-    rating: 3,
-  },
-  {
-    name: "Bash/Shell",
-    rating: 4,
-  },
-  {
-    name: "Java",
-    rating: 4,
-  },
-  {
-    name: "JavaScript",
-    rating: 5,
-  },
-  {
-    name: "HTML",
-    rating: 3,
-  },
-  {
-    name: "CSS",
-    rating: 3,
-  },
-  {
-    name: "SQLite",
-    rating: 2,
-  },
-  {
-    name: "Postgres",
-    rating: 2,
-  },
-];
-
-const tech = [
-  {
-    name: "React.js",
-    rating: 3,
-  },
-  {
-    name: "Vue.js",
-    rating: 3,
-  },
-  {
-    name: "Unity",
-    rating: 5,
-  },
-  {
-    name: "Tensorflow",
-    rating: 3,
-  },
-  {
-    name: "Selenium",
-    rating: 4,
-  },
-  {
-    name: "Cucumber",
-    rating: 4,
-  },
-  {
-    name: "Flask",
-    rating: 3,
-  },
-  {
-    name: "Pygame",
-    rating: 4,
-  },
-  {
-    name: "Git",
-    rating: 5,
-  },
-  {
-    name: "Figma",
-    rating: 4,
-  },
-];
-
-const soft = [
-  {
-    name: "Agile",
-    rating: 4,
-  },
-  {
-    name: "Scrum",
-    rating: 4,
-  },
-  {
-    name: "Microsoft Office",
-    rating: 5,
-  },
-  {
-    name: "Windows 10",
-    rating: 5,
-  },
-  {
-    name: "Linux/Unix",
-    rating: 4,
-  },
-  {
-    name: "MacOS",
-    rating: 5,
-  },
-];
+const data = JSON.parse(JSON.stringify(rawData));
 
 function Skills() {
   return (
@@ -141,7 +19,7 @@ function Skills() {
             <Card className="skills__card">
               <h3>Languages</h3>
               <div className="skills__details">
-                {languages
+                {data["languages"]
                   .sort((a, b) => {
                     return a.rating - b.rating;
                   })
@@ -164,7 +42,7 @@ function Skills() {
             <Card className="skills__card">
               <h3>Technologies</h3>
               <div className="skills__details">
-                {tech
+                {data["tech"]
                   .sort((a, b) => {
                     return a.rating - b.rating;
                   })
@@ -187,7 +65,7 @@ function Skills() {
             <Card className="skills__card">
               <h3>Industry Skills</h3>
               <div className="skills__details">
-                {soft
+                {data["soft"]
                   .sort((a, b) => {
                     return a.rating - b.rating;
                   })

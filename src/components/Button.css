@@ -3,7 +3,7 @@
   width: max-content;
   display: inline-block;
   font-size: 20px;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   outline: none;
   border: none;
   cursor: pointer;

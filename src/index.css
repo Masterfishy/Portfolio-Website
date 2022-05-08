@@ -25,6 +25,8 @@
   --container-width-sm: 90%;
 
   --navbar-width: 45px;
+
+  --border-radius: 2px;
 }
 
 html {
@@ -86,6 +88,15 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-white);
 }
 
 /* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
