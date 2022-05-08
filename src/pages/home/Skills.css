@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 1rem;
+  text-align: left;
 }
 
 .skills__star {
@@ -46,11 +47,15 @@
   .skills__cards {
     grid-template-columns: 1fr;
   }
+
+  .skills__details {
+    text-align: center;
+  }
 }
 
 /* ======= MEDIA QUERIES - SMALL DEVICES ======= */
 @media screen and (max-width: 600px) {
   .skills__card {
-    padding: 1rem;
+    padding: 2rem;
   }
 }

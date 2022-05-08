@@ -44,6 +44,7 @@
 .experiences__card-details {
   color: var(--color-primary);
   width: max-content;
+  font-size: 1rem;
 }
 
 .experiences__card-detail {
@@ -55,4 +56,18 @@
 .experiences__card-detail i {
   width: 2rem;
   /* border: 1px solid red; */
+}
+
+/* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
+@media screen and (max-width: 1024px) {
+  .container.experiences__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======= MEDIA QUERIES - SMALL DEVICES ======= */
+@media screen and (max-width: 600px) {
+  .experiences__card {
+    grid-template-columns: 1fr;
+  }
 }

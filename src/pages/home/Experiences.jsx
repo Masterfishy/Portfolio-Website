@@ -9,7 +9,6 @@ function Experiences() {
     <>
       <div id="experiences" className="container experiences__container">
         <div className="section__header">
-          <h5>Check Out</h5>
           <h2>My Experiences</h2>
         </div>
         <div className="experiences__body">

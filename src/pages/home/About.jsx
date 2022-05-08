@@ -23,7 +23,6 @@ function About() {
     <>
       <div id="about" className="container about__container">
         <div className="section__header">
-          <h5>Get to Know</h5>
           <h2>About Me</h2>
           {!button && (
             <Button buttonStyle="btn-primary" to="#contact">
