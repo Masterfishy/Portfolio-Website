@@ -26,7 +26,7 @@
 
   --navbar-width: 45px;
 
-  --border-radius: 2px;
+  --border-radius: 4px;
 }
 
 html {
@@ -104,7 +104,7 @@ a:hover {
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
 }
 

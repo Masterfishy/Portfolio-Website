@@ -54,4 +54,8 @@
   .skills__card {
     padding: 2rem;
   }
+
+  .skills__cards {
+    gap: 0.7rem;
+  }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Contact.css";
 import { Card } from "../../components/Card";
 
 function Contact() {

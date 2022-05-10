@@ -63,6 +63,9 @@
 
 /* ======= MEDIA QUERIES - SMALL DEVICES ======= */
 @media screen and (max-width: 600px) {
+  .experiences__cards {
+    gap: 0.7rem;
+  }
   .experiences__card {
     grid-template-columns: 1fr;
   }
