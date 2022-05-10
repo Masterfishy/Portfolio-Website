@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "name": "Email",
+      "tag": "zachtl13@yahoo.com",
+      "link": "mailto:zachtl13@yahoo.com",
+      "fa-icon": "fa-solid fa-envelope"
+    },
+    {
+      "name": "LinkedIn",
+      "tag": "Zachary Long",
+      "link": "https://www.linkedin.com/in/zachlong-42/",
+      "fa-icon": "fa-brands fa-linkedin"
+    },
+    {
+      "name": "Handshake",
+      "tag": "Zachary Long",
+      "link": "https://app.joinhandshake.com/stu/users/10966478",
+      "fa-icon": ""
+    }
+  ]
+}

@@ -1,7 +1,3 @@
-.container.skills__container {
-  padding-top: calc(var(--navbar-width) + 1rem);
-}
-
 .skills__body {
   /* border: 1px solid red; */
 }

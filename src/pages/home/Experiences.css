@@ -1,7 +1,3 @@
-.container.experiences__container {
-  padding-top: calc(var(--navbar-width) + 1rem);
-}
-
 .experiences__cards {
   display: flex;
   flex-direction: column;

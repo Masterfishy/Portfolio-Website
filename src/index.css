@@ -50,7 +50,8 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 20% 80%;
-  /* border: 1px solid red; */
+  padding-top: calc(var(--navbar-width) + 1rem);
+  border: 1px solid red;
 }
 
 h1,
