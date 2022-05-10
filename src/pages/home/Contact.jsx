@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { Card } from "../../components/Card";
+import { SiHandshake } from "react-icons/si";
 
 function Contact() {
   return (
@@ -11,7 +12,7 @@ function Contact() {
         </div>
         <div className="contact__body">
           <Card className="contact__card">
-            <i />
+            <i className="fa-solid fa-envelope contact__icon" />
             <h4>Email</h4>
             <h5>zachtl13@yahoo.com</h5>
             <a
@@ -23,7 +24,7 @@ function Contact() {
             </a>
           </Card>
           <Card className="contact__card">
-            <i />
+            <i className="fa-brands fa-linkedin contact__icon" />
             <h4>LinkedIn</h4>
             <h5>Zachary Long</h5>
             <a
@@ -35,7 +36,7 @@ function Contact() {
             </a>
           </Card>
           <Card className="contact__card">
-            <i />
+            <SiHandshake className="contact__icon" />
             <h4>Handshake</h4>
             <h5>Zachary Long</h5>
             <a

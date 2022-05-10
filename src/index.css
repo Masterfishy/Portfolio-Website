@@ -51,7 +51,7 @@ body {
   display: grid;
   grid-template-columns: 20% 80%;
   padding-top: calc(var(--navbar-width) + 1rem);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 h1,

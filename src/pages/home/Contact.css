@@ -4,10 +4,16 @@
   gap: 1.2rem;
 }
 
+.contact__card a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
 .contact__icon {
-  color: var(--color-primary);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  /* color: var(--color-primary); */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ======= MEDIA QUERIES - MEDIUM DEVICES ======= */
