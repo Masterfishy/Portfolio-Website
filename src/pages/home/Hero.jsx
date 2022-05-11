@@ -7,12 +7,21 @@ function Hero() {
   return (
     <>
       <div id="home" className="container hero__container">
-        <div className="hero__headshot">
-          <img src="assets/me.JPG" alt="Zach Long's headshot" />
-        </div>
         <div className="hero__body">
-          <h5>Oh hey it's</h5>
-          <h1>Zach Long</h1>
+          <svg viewBox="0 0 125 40">
+            <text fill="#fff" x="0" y="10" fontSize={7}>
+              Oh hey it's
+            </text>
+            <text
+              fill="#ffffff"
+              x="0"
+              y="30"
+              // fontWeight={500}
+              letterSpacing={5}
+            >
+              Zach Long
+            </text>
+          </svg>
           <div className="hero__cta">
             <DownloadButton buttonStyle="btn-primary" to="assets/resume.pdf">
               Download CV
