@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const navigationOptions = [
@@ -42,13 +41,6 @@ function Navbar() {
       <nav className="navbar">
         <div className={`navbar__container ${atTop ? "" : "floating"}`}>
           <div className="navbar__logo" onClick={closeMobileMenu}>
-            {/* <Link
-            to="#home"
-            className="navbar__logo-link"
-            onClick={closeMobileMenu}
-          >
-            ZACH LONG
-          </Link> */}
             <a href="#home" className="navbar__logo-link">
               ZACH LONG
             </a>
@@ -60,18 +52,13 @@ function Navbar() {
             {navigationOptions.map(({ name, link }, id) => {
               return (
                 <li className="nav__item" key={id}>
-                  {/* <Link to={link} className="nav__link" onClick={closeMobileMenu}>
-                  {name}
-                </Link> */}
-                  {
-                    <a
-                      href={link}
-                      className="nav__link"
-                      onClick={closeMobileMenu}
-                    >
-                      {name}
-                    </a>
-                  }
+                  <a
+                    href={link}
+                    className="nav__link"
+                    onClick={closeMobileMenu}
+                  >
+                    {name}
+                  </a>
                 </li>
               );
             })}

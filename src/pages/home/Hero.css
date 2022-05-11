@@ -24,10 +24,6 @@
   width: 100%;
 }
 
-.hero__body svg ~ text {
-  letter-spacing: 200;
-}
-
 .hero__cta {
   margin-top: 1rem;
   display: flex;
@@ -46,17 +42,10 @@
 /* ======= MEDIA QUERIES - SMALL DEVICES ======= */
 @media screen and (max-width: 600px) {
   .container.hero__container {
-    height: 40rem;
-    align-items: flex-start;
+    height: calc(100vh - var(--navbar-width));
   }
 
   .hero__body {
-    position: absolute;
-    top: 24rem;
-  }
-
-  .hero__cta {
-    margin-top: 2rem;
-    gap: 2rem;
+    align-items: center;
   }
 }
