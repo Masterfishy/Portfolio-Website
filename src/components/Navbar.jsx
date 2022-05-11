@@ -38,8 +38,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className={`navbar__container ${atTop ? "" : "floating"}`}>
+      <nav className={`navbar ${atTop ? "" : "floating"}`}>
+        <div className="navbar__container">
           <div className="navbar__logo" onClick={closeMobileMenu}>
             <a href="#home" className="navbar__logo-link">
               ZACH LONG
