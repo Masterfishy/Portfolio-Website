@@ -51,7 +51,7 @@ function Footer() {
           </a>
         </div>
         <div className="footer__copyright">
-          <small>Made by Zach Long.</small>
+          <small>Made with React by Zach.</small>
         </div>
       </footer>
     </>
