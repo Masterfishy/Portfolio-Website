@@ -1,34 +1,12 @@
-import React, { useEffect, useState } from "react";
 import "./About.css";
-import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 
 function About() {
-  const [button, setButton] = useState(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 1024) {
-      setButton(true);
-    } else {
-      setButton(false);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-    window.addEventListener("resize", showButton);
-  }, []);
-
   return (
     <>
       <div id="about" className="container about__container">
         <div className="section__header">
           <h2>About Me</h2>
-          {!button && (
-            <Button buttonStyle="btn-primary" to="#contact">
-              Let's Talk
-            </Button>
-          )}
         </div>
         <div className="about__body">
           <div className="about__cards">
@@ -86,11 +64,6 @@ function About() {
               adventure.
             </p>
           </div>
-          {button && (
-            <Button buttonStyle="btn-primary" to="#contact">
-              Let's Talk
-            </Button>
-          )}
         </div>
       </div>
     </>

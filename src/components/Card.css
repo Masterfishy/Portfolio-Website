@@ -6,9 +6,3 @@
   text-align: center;
   transition: var(--transition);
 }
-
-.card:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
-}
