@@ -6,19 +6,21 @@ import { DownloadButton } from "../../components/DownloadButton";
 function Hero() {
   const [isMobile, setMobile] = useState(false);
 
+  const handleResize = () => {
+    if (window.innerWidth <= 1024) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+
   useEffect(() => {
-    const switchMobile = () => {
-      if (window.innerWidth <= 1024) {
-        setMobile(true);
-      } else {
-        setMobile(false);
-      }
-    };
+    handleResize();
 
-    window.addEventListener("resize", switchMobile);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", switchMobile);
-  }, []);
+    return () => window.removeEventListener("resize", handleResize);
+  });
 
   return (
     <>
