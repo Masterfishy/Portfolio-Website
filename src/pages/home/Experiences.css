@@ -31,12 +31,6 @@
   padding: 1rem;
 }
 
-.experiences__card-body:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
-}
-
 .experiences__card-details {
   color: var(--color-primary);
   width: max-content;
