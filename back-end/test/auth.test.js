@@ -1,8 +1,6 @@
 /**
  * Tests for auth routes
  */
-process.env.NODE_ENV = "test";
-
 import User from "../models/User.js";
 
 import chai from "chai";

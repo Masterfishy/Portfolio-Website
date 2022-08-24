@@ -1,19 +1,22 @@
 import express from "express";
-import config from "./config.js";
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import bodyParser from "body-parser";
 
-const PORT = config.PORT || 5000;
+dotenv.config();
+
+const PORT = process.env.PORT || 5000;
+const DB_URI =
+  process.env.NODE_ENV === "test"
+    ? process.env.TEST_DB_URI
+    : process.env.DB_URI;
 
 const app = express();
 
-console.log(process.env.NODE_ENV);
-console.log(config.DB_URI);
-
 // Connect to the database
 mongoose
-  .connect(config.DB_URI, {
+  .connect(DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
