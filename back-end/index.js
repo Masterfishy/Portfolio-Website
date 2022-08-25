@@ -1,8 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import authRoute from "./routes/auth.js";
 import bodyParser from "body-parser";
+import authRoute from "./routes/auth.js";
+import postsRoute from "./routes/posts.js";
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.use(bodyParser.json({ type: "application/json" }));
 
 // Routes
 app.use("/api/auth", authRoute);
+app.use("/api/posts", postsRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}.`);

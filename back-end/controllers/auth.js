@@ -9,7 +9,7 @@ import bcrypt from "bcrypt";
 async function register(req, res) {
   try {
     // Hash the password
-    const salt = await bcrypt.genSalt(process.env.SALT_ROUNDS);
+    const salt = await bcrypt.genSalt(parseInt(process.env.SALT_ROUNDS));
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
     // Create a new user
@@ -23,7 +23,7 @@ async function register(req, res) {
 
     res.status(200).json(user);
   } catch (err) {
-    res.status(400).json(`Could not register user. ${err.message}`);
+    res.status(400).json(`Could not register user! ${err.message}`);
   }
 }
 
@@ -34,7 +34,23 @@ async function register(req, res) {
  */
 async function login(req, res) {
   try {
-  } catch (err) {}
+    const user = await User.findOne({ username: req.body.username });
+    if (!user) {
+      res.status(400).json("Wrong credentials!");
+      return;
+    }
+
+    const validated = await bcrypt.compare(req.body.password, user.password);
+    if (!validated) {
+      res.status(400).json("Wrong credentials!");
+      return;
+    }
+
+    const { password, ...others } = user._doc;
+    res.status(200).json(others);
+  } catch (err) {
+    res.status(500).json(`Something went wrong! ${err.message}`);
+  }
 }
 
 export default { register, login };
