@@ -1,7 +1,7 @@
 import Post from "../models/Post.js";
 
 /**
- * PoST / route to create a new post.
+ * POST / route to create a new post.
  * @param {*} req The request object
  * @param {*} res The response object
  */
@@ -16,4 +16,25 @@ async function create(req, res) {
   }
 }
 
-export default { create };
+/**
+ * PUT /:id route to update a post.
+ * @param {*} req The request object
+ * @param {*} res The response object
+ */
+async function update(req, res) {
+  try {
+    const updatedPost = await Post.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(500).json(`Could not update the post! ${err.message}`);
+  }
+}
+
+export default { create, update };

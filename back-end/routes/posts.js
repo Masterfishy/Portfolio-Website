@@ -7,6 +7,7 @@ const router = express.Router();
 router.post("/", posts.create);
 
 // Update
+router.put("/:id", posts.update);
 
 // Delete
 
