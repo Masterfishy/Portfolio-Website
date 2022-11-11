@@ -10,6 +10,7 @@ router.post("/", posts.create);
 router.put("/:id", posts.update);
 
 // Delete
+router.delete("/:id", posts._delete);
 
 // Get One Post
 

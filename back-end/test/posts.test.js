@@ -28,7 +28,7 @@ describe("Post tests", () => {
   /**
    * Test /posts/ POST route to create a post
    */
-  describe("/posts/", () => {
+  describe("POST /posts/", () => {
     it("it should POST successfully and create a new post", (done) => {
       chai
         .request(app)
@@ -89,7 +89,7 @@ describe("Post tests", () => {
   /**
    * Test /posts/:id PUT route to update a post
    */
-  describe("/post/:id", () => {
+  describe("PUT /posts/:id", () => {
     it("it should PUT an update to the post", (done) => {
       chai
         .request(app)
@@ -110,5 +110,12 @@ describe("Post tests", () => {
             });
         });
     });
+  });
+
+  /**
+   * Test /posts/:id DELETE route to delete a post
+   */
+  describe("DELETE /posts/:id", () => {
+    it("it should DELETE a post", (done) => {});
   });
 });

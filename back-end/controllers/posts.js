@@ -37,4 +37,19 @@ async function update(req, res) {
   }
 }
 
-export default { create, update };
+/**
+ * DELETE /:id route to delete a post.
+ * @param {*} req The request object
+ * @param {*} res The response object
+ */
+async function _delete(req, res) {
+  try {
+    await Post.findByIdAndDelete(req.params.id);
+
+    res.status(200).json("Post has been deleted.");
+  } catch (err) {
+    res.status(500).json(`Failed to delete post! ${err.message}`);
+  }
+}
+
+export default { create, update, _delete };
