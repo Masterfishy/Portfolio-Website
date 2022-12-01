@@ -14,9 +14,9 @@ function Contact() {
           <Card className="contact__card">
             <i className="fa-solid fa-envelope contact__icon" />
             <h4>Email</h4>
-            <h5>zachtl13@yahoo.com</h5>
+            <h5>zachtlong42@gmail.com</h5>
             <a
-              href="mailto:zachtl13@yahoo.com"
+              href="mailto:zachtlong42@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
